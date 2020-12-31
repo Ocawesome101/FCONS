@@ -6,9 +6,12 @@ end
 
 local fsl = component.list("filesystem")
 local fs
-repeat
-  fs = fsl()
-until fs ~= computer.tmpAddress()
+for k, v in pairs(fsl) do
+  if k ~= computer.tmpAddress() then
+    fs = component.proxy(k)
+    break
+  end
+end
 
 if not fs.exists("/init.lua") then
   error("no init.lua found on filesystem "..fs.address, 0)
