@@ -1,0 +1,5 @@
+Some things I'd like to do:
+
+ - Write a game demoing the sprite system, perhaps a Super Mario Brothers clone
+ - Write a Pac-Man clone
+ - Perhaps one or two other things
